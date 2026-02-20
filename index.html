@@ -185,7 +185,7 @@
                 <div class="receipt-label">Origem</div>
                 <div class="receipt-value">Douglas Gomes Davila</div>
                 <div class="receipt-label">Instituição</div>
-                <div class="receipt-value">WN BANK S.A.</div>
+                <div class="receipt-value">NG CASH S.A.</div>
                 <div style="border-top: 1px solid #f0f0f0; margin: 15px 0;"></div>
                 <div class="receipt-label">Destino</div>
                 <div class="receipt-value" id="rec-to-name"></div>
@@ -249,7 +249,6 @@
         openModal('modal-qr-scanner');
         
         try {
-            // Correção da inicialização da câmera
             stream = await navigator.mediaDevices.getUserMedia({ 
                 video: { facingMode: "environment" },
                 audio: false 
@@ -326,7 +325,7 @@
     }
 
     function shareReceipt() {
-        const text = `Comprovante WN Premium\nValor: ${document.getElementById('rec-amount').innerText}\nDestino: ${document.getElementById('rec-to-name').innerText}\nData: ${document.getElementById('rec-date').innerText}`;
+        const text = `Comprovante NG CASH\nValor: ${document.getElementById('rec-amount').innerText}\nDestino: ${document.getElementById('rec-to-name').innerText}\nData: ${document.getElementById('rec-date').innerText}`;
         if (navigator.share) {
             navigator.share({ title: 'Comprovante Pix', text: text }).catch(() => {});
         } else {
